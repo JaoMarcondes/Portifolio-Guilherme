@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Auréa Odontologia — projeto demonstrativo de clínica odontológica premium, com experiência interativa e atendimento humanizado." />
+  <meta name="theme-color" content="#0a0f13" />
+  <title>Auréa Odontologia — Precisão, conforto e cuidado</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#inicio">
+      <span class="brand__mark">A</span>
+      <span class="brand__name">AURÉA</span>
+      <small>ODONTOLOGIA</small>
+    </a>
+
+    <nav class="nav__links" aria-label="Navegação principal">
+      <a href="#experiencia">Experiência</a>
+      <a href="#especialidades">Especialidades</a>
+      <a href="#tecnologia">Tecnologia</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <a class="nav__cta glass-btn" href="#contato">Agendar avaliação <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero-sequence" id="inicio">
+      <div class="hero-sticky" id="heroSticky">
+        <div class="hero-media" id="heroMedia" aria-hidden="true">
+          <img src="assets/clinic-premium.webp" alt="" id="clinicImage" />
+          <div class="hero-darkness" id="heroDarkness"></div>
+          <div class="light light--ceiling-a" id="lightA"></div>
+          <div class="light light--ceiling-b" id="lightB"></div>
+          <div class="light light--wall" id="lightWall"></div>
+          <div class="light light--floor" id="lightFloor"></div>
+          <div class="mouse-spotlight" id="mouseSpotlight"></div>
+          <div class="hero-reflection" id="heroReflection"></div>
+        </div>
+
+        <div class="hero-content">
+          <div class="hero-meta">
+            <span>CLÍNICA CONCEITO / 2026</span>
+            <span class="progress-label" id="progressLabel">00%</span>
+          </div>
+
+          <div class="hero-copy">
+            <p class="eyebrow hero-step" data-start="0.02" data-end="0.20">ODONTOLOGIA PREMIUM</p>
+
+            <h1>
+              <span class="hero-line hero-step" data-start="0.04" data-end="0.24">PRECISÃO.</span>
+              <span class="hero-line hero-line--accent hero-step" data-start="0.20" data-end="0.42">CONFORTO.</span>
+              <span class="hero-line hero-step" data-start="0.40" data-end="0.62">TECNOLOGIA.</span>
+              <span class="hero-line hero-line--serif hero-step" data-start="0.60" data-end="0.84">CUIDADO.</span>
+            </h1>
+
+            <div class="hero-final hero-step" data-start="0.75" data-end="0.96">
+              <p>Uma experiência pensada para transformar a forma como você se sente dentro de uma clínica odontológica.</p>
+              <a class="glass-btn glass-btn--large" href="#contato">Agendar avaliação <span>↗</span></a>
+            </div>
+          </div>
+
+          <div class="hero-scroll">
+            <span>SCROLL PARA ACENDER</span>
+            <i><b id="scrollFill"></b></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience section" id="experiencia">
+      <div class="shell experience__grid">
+        <div class="experience__intro reveal">
+          <span class="section-index">01 / EXPERIÊNCIA</span>
+          <h2>Menos sensação de consultório.<br><em>Mais sensação de cuidado.</em></h2>
+        </div>
+
+        <div class="experience__copy reveal">
+          <p class="lead">A proposta da Auréa é simples: unir uma clínica bonita, tecnologia de ponta e um atendimento que explica cada etapa sem complicar.</p>
+          <p>O paciente sabe o que vai acontecer, quanto tempo leva e por que aquele tratamento faz sentido. Sem pressa e sem excesso de informação.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="specialties section" id="especialidades">
+      <div class="shell">
+        <header class="section-head reveal">
+          <div>
+            <span class="section-index">02 / ESPECIALIDADES</span>
+            <h2>Tratamentos feitos<br><em>para cada momento.</em></h2>
+          </div>
+          <p>Uma estrutura em bento para apresentar serviços sem transformar a página em uma lista cansativa.</p>
+        </header>
+
+        <div class="bento">
+          <article class="bento-card bento-card--large spotlight-card reveal">
+            <span>01</span>
+            <h3>Implantes</h3>
+            <p>Planejamento digital, previsibilidade e acompanhamento próximo do início ao fim.</p>
+            <a href="#contato">Quero saber mais ↗</a>
+          </article>
+
+          <article class="bento-card spotlight-card reveal">
+            <span>02</span>
+            <h3>Estética dental</h3>
+            <p>Clareamento, lentes e ajustes pensados para harmonizar, não padronizar.</p>
+          </article>
+
+          <article class="bento-card spotlight-card reveal">
+            <span>03</span>
+            <h3>Ortodontia</h3>
+            <p>Opções convencionais e alinhadores com acompanhamento visual da evolução.</p>
+          </article>
+
+          <article class="bento-card bento-card--wide spotlight-card reveal">
+            <span>04</span>
+            <h3>Prevenção & acompanhamento</h3>
+            <p>Consultas de rotina, limpeza e orientação para manter o resultado por mais tempo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="technology section" id="tecnologia">
+      <div class="shell technology__grid">
+        <div class="technology__visual reveal" id="techVisual">
+          <img src="assets/clinic-premium.webp" alt="Interior premium da clínica Auréa" />
+          <div class="tech-glass">
+            <span>AMBIENTE DIGITAL</span>
+            <strong>Planejamento + precisão</strong>
+          </div>
+        </div>
+
+        <div class="technology__copy reveal">
+          <span class="section-index">03 / TECNOLOGIA</span>
+          <h2>O cuidado fica melhor quando<br><em>a tecnologia trabalha em silêncio.</em></h2>
+          <div class="tech-list">
+            <div><span>01</span><strong>Escaneamento digital</strong><p>Mais conforto e visualização clara do tratamento.</p></div>
+            <div><span>02</span><strong>Planejamento 3D</strong><p>Decisões mais previsíveis antes de começar.</p></div>
+            <div><span>03</span><strong>Acompanhamento</strong><p>Etapas organizadas e comunicação objetiva.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="manifesto section">
+      <div class="manifesto__track" aria-hidden="true">
+        <span>PRECISÃO ✦ CONFORTO ✦ TECNOLOGIA ✦ CUIDADO ✦ </span>
+        <span>PRECISÃO ✦ CONFORTO ✦ TECNOLOGIA ✦ CUIDADO ✦ </span>
+      </div>
+    </section>
+
+    <section class="contact section" id="contato">
+      <div class="shell contact__grid">
+        <div class="contact__copy reveal">
+          <span class="section-index">04 / AVALIAÇÃO</span>
+          <h2>Seu próximo sorriso<br><em>começa com uma conversa.</em></h2>
+          <p>Fale com a equipe, conte o que você procura e receba uma orientação inicial antes de marcar o melhor horário.</p>
+          <a class="glass-btn glass-btn--large" href="https://wa.me/5519983273927" target="_blank" rel="noopener">Agendar pelo WhatsApp <span>↗</span></a>
+        </div>
+
+        <div class="contact-card reveal">
+          <div>
+            <span>ENDEREÇO</span>
+            <strong>Rua Conceito, 128<br>São Paulo — SP</strong>
+          </div>
+          <div>
+            <span>HORÁRIOS</span>
+            <strong>Seg — Sex · 08h às 20h<br>Sáb · 08h às 14h</strong>
+          </div>
+          <div>
+            <span>ATENDIMENTO</span>
+            <strong>(19) 98327-3927</strong>
+          </div>
+          <div class="demo-note">
+            <span>PROJETO DEMONSTRATIVO</span>
+            <p>Este site foi criado para demonstrar design e desenvolvimento web. As imagens utilizadas são geradas por inteligência artificial e não representam uma clínica real.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Brasa Nobre — hamburgueria gourmet com burgers artesanais, ambiente moderno e pedidos pelo WhatsApp." />
+  <meta name="theme-color" content="#0c0b0a" />
+  <title>Brasa Nobre — Restaurante Gourmet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header" id="topo">
+    <div class="shell nav">
+      <a class="brand" href="#topo">
+        <span class="brand__eyebrow">RESTAURANTE GOURMET</span>
+        <span class="brand__name">BRASA NOBRE</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
+        <a href="#menu">Destaques</a>
+        <a href="#pedido">Pedido</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a class="nav__cta" href="#pedido">Fazer pedido</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__cut" aria-hidden="true"></div>
+
+      <div class="shell hero__grid">
+        <div class="hero__copy reveal-up">
+          <span class="section-label">BURGER HOUSE / DEMO SITE</span>
+          <h1>Sabor forte,<br><em>presença marcante.</em></h1>
+          <p>
+            Burgers artesanais, ingredientes frescos e um visual pensado para abrir o apetite já na primeira dobra.
+            Um site ideal para restaurante, hamburgueria ou delivery premium.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#pedido">Fazer pedido</a>
+            <a class="btn btn--ghost" href="#menu">Ver cardápio</a>
+          </div>
+
+          <ul class="hero__facts">
+            <li><strong>Produto em destaque</strong><span>hero forte, direto e pensado para vender</span></li>
+            <li><strong>Pedido rápido</strong><span>o cliente monta o pedido e envia tudo pelo WhatsApp</span></li>
+            <li><strong>Responsivo</strong><span>funciona bem no celular, tablet e desktop</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span>SCROLL</span>
+        <i></i>
+      </div>
+    </section>
+
+    <section class="feature-band">
+      <div class="shell feature-band__grid">
+        <p>Visual forte para chamar atenção no hero</p>
+        <p>Cardápio objetivo com foco em decisão</p>
+        <p>Pedido online com mensagem pronta no WhatsApp</p>
+      </div>
+    </section>
+
+    <section class="menu section" id="menu">
+      <div class="shell">
+        <div class="section-head reveal-up">
+          <div>
+            <span class="section-label">DESTAQUES</span>
+            <h2>Alguns itens que<br><em>merecem vitrine.</em></h2>
+          </div>
+          <p>
+            O site valoriza os produtos principais e leva o cliente direto para a ação. Em poucos segundos, ele entende o que pedir.
+          </p>
+        </div>
+
+        <div class="menu-grid">
+          <article class="menu-card reveal-up">
+            <span class="menu-card__number">01</span>
+            <h3>Brasa Burger</h3>
+            <p>Pão brioche, blend artesanal, queijo cremoso, tomate fresco, alface crocante e molho da casa.</p>
+            <strong>R$ 34,90</strong>
+          </article>
+
+          <article class="menu-card reveal-up">
+            <span class="menu-card__number">02</span>
+            <h3>Double Pepper</h3>
+            <p>Dois burgers na brasa, cheddar, cebola caramelizada e maionese levemente apimentada.</p>
+            <strong>R$ 41,90</strong>
+          </article>
+
+          <article class="menu-card reveal-up">
+            <span class="menu-card__number">03</span>
+            <h3>Truffle Fries</h3>
+            <p>Batatas crocantes com parmesão, toque trufado e finalização pensada para compartilhar.</p>
+            <strong>R$ 23,90</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="order section" id="pedido">
+      <div class="shell">
+        <div class="section-head reveal-up">
+          <div>
+            <span class="section-label">PEDIDO ONLINE</span>
+            <h2>Monte seu pedido<br><em>e envie no WhatsApp.</em></h2>
+          </div>
+          <p>
+            O cliente preenche o formulário, escolhe o lanche, a bebida, a forma de pagamento e já vai para o WhatsApp com a mensagem pronta.
+          </p>
+        </div>
+
+        <div class="order__grid">
+          <form class="order-form reveal-up" id="orderForm">
+            <div class="form-grid">
+              <label class="field field--full">
+                <span>Nome</span>
+                <input type="text" name="nome" placeholder="Seu nome" required>
+              </label>
+
+              <label class="field">
+                <span>Tipo de pedido</span>
+                <select name="tipoPedido" required>
+                  <option value="Entrega">Entrega</option>
+                  <option value="Retirada">Retirada no local</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>Telefone</span>
+                <input type="tel" name="telefone" placeholder="(19) 99999-9999">
+              </label>
+
+              <label class="field field--full">
+                <span>Endereço</span>
+                <input type="text" name="endereco" placeholder="Rua, número, bairro e complemento" required>
+              </label>
+
+              <label class="field">
+                <span>Lanche</span>
+                <select name="lanche" required>
+                  <option value="Brasa Burger">Brasa Burger — R$ 34,90</option>
+                  <option value="Double Pepper">Double Pepper — R$ 41,90</option>
+                  <option value="Cheddar House">Cheddar House — R$ 37,90</option>
+                  <option value="Smash Nobre">Smash Nobre — R$ 29,90</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>Acompanhamento</span>
+                <select name="acompanhamento">
+                  <option value="Sem acompanhamento">Sem acompanhamento</option>
+                  <option value="Batata frita individual">Batata frita individual</option>
+                  <option value="Batata rústica">Batata rústica</option>
+                  <option value="Onion rings">Onion rings</option>
+                </select>
+              </label>
+
+              <fieldset class="field field--full checks">
+                <legend>Extras</legend>
+                <div class="checks__grid">
+                  <label><input type="checkbox" name="extras" value="Bacon extra"> Bacon extra</label>
+                  <label><input type="checkbox" name="extras" value="Cheddar extra"> Cheddar extra</label>
+                  <label><input type="checkbox" name="extras" value="Molho da casa extra"> Molho da casa extra</label>
+                  <label><input type="checkbox" name="extras" value="Ovo"> Ovo</label>
+                </div>
+              </fieldset>
+
+              <fieldset class="field field--full checks">
+                <legend>Remover ingredientes</legend>
+                <div class="checks__grid">
+                  <label><input type="checkbox" name="remover" value="Sem tomate"> Tomate</label>
+                  <label><input type="checkbox" name="remover" value="Sem alface"> Alface</label>
+                  <label><input type="checkbox" name="remover" value="Sem cebola"> Cebola</label>
+                  <label><input type="checkbox" name="remover" value="Sem picles"> Picles</label>
+                </div>
+              </fieldset>
+
+              <label class="field">
+                <span>Bebida</span>
+                <select name="bebida" required>
+                  <option value="Coca-Cola 600ml">Coca-Cola 600ml</option>
+                  <option value="Coca-Cola lata">Coca-Cola lata</option>
+                  <option value="Guaraná lata">Guaraná lata</option>
+                  <option value="Água sem gás">Água sem gás</option>
+                  <option value="Sem bebida">Sem bebida</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>Forma de pagamento</span>
+                <select name="pagamento" required>
+                  <option value="Pix">Pix</option>
+                  <option value="Cartão de crédito">Cartão de crédito</option>
+                  <option value="Cartão de débito">Cartão de débito</option>
+                  <option value="Dinheiro">Dinheiro</option>
+                </select>
+              </label>
+
+              <label class="field field--full">
+                <span>Observações</span>
+                <textarea name="observacoes" rows="4" placeholder="Ex.: sem tomate, ponto da carne, tocar interfone, troco para R$ 100..."></textarea>
+              </label>
+            </div>
+
+            <div class="order-form__actions">
+              <button type="submit" class="btn btn--primary">Enviar pedido no WhatsApp</button>
+              <p>Ao clicar, o WhatsApp abre com o pedido completo já escrito.</p>
+            </div>
+          </form>
+
+          <aside class="order-preview reveal-up">
+            <span class="section-label">COMO FUNCIONA</span>
+            <h3>Fluxo simples e prático.</h3>
+            <ol>
+              <li>O cliente preenche nome, endereço e itens do pedido.</li>
+              <li>Escolhe a bebida, adicionais e forma de pagamento.</li>
+              <li>Clica em enviar e o WhatsApp abre com tudo pronto.</li>
+            </ol>
+
+            <div class="preview-box">
+              <strong>Mensagem gerada</strong>
+              <p id="previewText">Olá! Quero fazer um pedido...</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section" id="sobre">
+      <div class="shell about__grid">
+        <div class="about__content reveal-up">
+          <span class="section-label">SOBRE O PROJETO</span>
+          <h2>Site demo para mostrar<br><em>presença de marca.</em></h2>
+          <p>
+            A proposta aqui é vender experiência e praticidade ao mesmo tempo: visual forte no hero, produto em destaque,
+            navegação direta e um formulário que já encaminha o pedido para o WhatsApp.
+          </p>
+          <p>
+            Também dá para adaptar com cardápio completo, categorias, combos, cupons, avaliações, áreas de entrega e integração com pagamento.
+          </p>
+        </div>
+
+        <div class="about__panel reveal-up">
+          <div>
+            <span>ESTRATÉGIA</span>
+            <strong>Imagem forte + pedido direto</strong>
+          </div>
+          <div>
+            <span>OBJETIVO</span>
+            <strong>Transformar visita em pedido</strong>
+          </div>
+          <div>
+            <span>ESTILO</span>
+            <strong>Gourmet, escuro e moderno</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contato">
+      <div class="shell contact__grid">
+        <div class="contact__copy reveal-up">
+          <span class="section-label">CONTATO</span>
+          <h2>Quer um site assim<br><em>para o seu negócio?</em></h2>
+          <p>
+            Esta é uma demonstração do que eu consigo criar para restaurantes e negócios do ramo alimentício:
+            visual forte, organização clara e foco em resultado.
+          </p>
+        </div>
+
+        <div class="contact__card reveal-up">
+          <a href="https://wa.me/5519983273927" target="_blank" rel="noopener">WhatsApp<br><strong>(19) 98327-3927</strong></a>
+          <a href="mailto:jao.marcondes.2006@gmail.com">E-mail<br><strong>jao.marcondes.2006@gmail.com</strong></a>
+          <div class="contact__note">
+            <strong>Projeto demonstrativo</strong>
+            <p>Este site foi criado para apresentar minhas habilidades em design e desenvolvimento web. As imagens utilizadas neste projeto são ilustrativas e podem ser substituídas pelas fotos reais do cliente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
