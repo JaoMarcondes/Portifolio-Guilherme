@@ -147,3 +147,136 @@ button{border:0;cursor:pointer}
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
   .reveal-up{opacity:1;transform:none}
 }
+
+
+/* =========================================================
+   MOBILE WIDTH / ZOOM FIX
+   Prevents contact data and grid children from widening page
+   ========================================================= */
+html,
+body{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+}
+
+body{
+  touch-action:pan-y;
+}
+
+.shell,
+.hero__grid,
+.section-head,
+.order__grid,
+.about__grid,
+.contact__grid,
+.contact__copy,
+.contact__card,
+.order-form,
+.order-preview,
+.field,
+.form-grid{
+  min-width:0;
+  max-width:100%;
+}
+
+.contact__card > a,
+.contact__card > a strong{
+  min-width:0;
+  max-width:100%;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+
+.contact__card > a strong{
+  line-height:1.25;
+}
+
+input,
+select,
+textarea{
+  min-width:0;
+  max-width:100%;
+}
+
+@media (max-width:720px){
+  .shell{
+    width:100%;
+    padding-left:18px;
+    padding-right:18px;
+  }
+
+  .site-header,
+  .nav{
+    width:100%;
+    max-width:100%;
+  }
+
+  .nav{
+    grid-template-columns:minmax(0,1fr) auto;
+    gap:10px;
+  }
+
+  .brand{
+    min-width:0;
+  }
+
+  .brand__eyebrow{
+    display:none;
+  }
+
+  .brand__name{
+    white-space:nowrap;
+    font-size:26px;
+  }
+
+  .nav__cta{
+    white-space:nowrap;
+    padding:11px 14px;
+    font-size:12px;
+  }
+
+  .hero__grid{
+    display:block;
+    width:100%;
+    min-width:0;
+  }
+
+  .hero h1{
+    max-width:100%;
+    overflow-wrap:normal;
+  }
+
+  .hero__actions .btn{
+    max-width:100%;
+  }
+
+  .order-form,
+  .order-preview,
+  .about__panel,
+  .contact__card,
+  .menu-card{
+    width:100%;
+    max-width:100%;
+  }
+
+  .contact__card{
+    padding:22px 18px;
+  }
+
+  .contact__card > a{
+    width:100%;
+  }
+
+  .contact__card > a strong{
+    font-size:clamp(15px,5vw,19px);
+  }
+
+  .contact__copy h2{
+    max-width:100%;
+  }
+
+  .contact__note{
+    min-width:0;
+  }
+}
