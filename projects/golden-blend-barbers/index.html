@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="description" content="Golden Blend Barbers — site conceitual para uma barbearia premium." />
+  <meta name="theme-color" content="#080808" />
+  <title>Golden Blend Barbers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.classList.add("js-ready")</script>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="shell nav">
+      <a href="#inicio" class="brand" aria-label="Golden Blend Barbers">
+        <span class="brand__eyebrow">EST. 2026 / PREMIUM BARBERSHOP</span>
+        <strong class="brand__name">GOLDEN BLEND</strong>
+        <small>BARBERS</small>
+      </a>
+
+      <nav class="nav__links" aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a class="nav__cta" href="#agendar">Agendar ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="shell hero__grid">
+        <div class="hero__copy reveal">
+          <span class="section-label">BARBEARIA PREMIUM / SITE DEMONSTRATIVO</span>
+          <h1>
+            Presença,
+            <span class="accent-word">estilo</span>
+            e cuidado em cada detalhe.
+          </h1>
+          <p>
+            Uma experiência visual pensada para transmitir sofisticação, confiança e identidade.
+            O tom em destaque do título é extraído da própria imagem da barbearia para criar uma primeira impressão mais coerente e marcante.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#servicos" class="btn btn--primary">Ver serviços</a>
+            <a href="#agendar" class="btn btn--ghost">Agendar no WhatsApp</a>
+          </div>
+
+          <div class="hero__meta">
+            <div class="hero__swatch">
+              <span class="hero__swatch-dot" id="dominantSwatch"></span>
+              <small>COR DA IMAGEM</small>
+            </div>
+            <div class="hero__meta-line"></div>
+            <div class="hero__microcopy">AMBIENTE CLÁSSICO · ESTÉTICA PREMIUM · INTERFACE RESPONSIVA</div>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="hero__frame">
+            <img id="heroImage" src="assets/hero-barber.webp" alt="Barbearia premium com cadeira clássica e poste de barbeiro" />
+            <div class="hero__overlay"></div>
+            <div class="hero__badge">
+              <span>01</span>
+              <strong>ESTILO CLÁSSICO, PRESENÇA MODERNA.</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>CORTE · BARBA · ACABAMENTO · TOALHA QUENTE · ESTILO · CORTE · BARBA · ACABAMENTO · TOALHA QUENTE · ESTILO ·</span>
+        <span>CORTE · BARBA · ACABAMENTO · TOALHA QUENTE · ESTILO · CORTE · BARBA · ACABAMENTO · TOALHA QUENTE · ESTILO ·</span>
+      </div>
+    </section>
+
+    <section class="section shell" id="servicos">
+      <header class="section-head reveal">
+        <div>
+          <span class="section-index">( 02 / )</span>
+          <h2>Serviços feitos para <em>valorizar sua imagem.</em></h2>
+        </div>
+        <p>
+          Uma apresentação clara dos serviços ajuda a transmitir organização e profissionalismo. Aqui, a proposta é combinar estética premium com informação objetiva.
+        </p>
+      </header>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <span>01</span>
+          <h3>Executive Cut</h3>
+          <p>Corte clássico ou contemporâneo com acabamento preciso, pensado para quem quer presença sem exagero.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <span>02</span>
+          <h3>Royal Beard</h3>
+          <p>Modelagem e alinhamento da barba com toalha quente, navalha e atenção ao formato do rosto.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <span>03</span>
+          <h3>Signature Styling</h3>
+          <p>Finalização com produtos selecionados para manter textura, fixação e aparência refinada.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <span>04</span>
+          <h3>Complete Experience</h3>
+          <p>Combo completo com corte, barba e acabamento para oferecer uma experiência premium do começo ao fim.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell experience" id="experiencia">
+      <div class="experience__grid">
+        <div class="experience__media reveal">
+          <img src="assets/lounge.webp" alt="Ambiente sofisticado da barbearia" />
+        </div>
+
+        <div class="experience__copy reveal">
+          <span class="section-index">( 03 / )</span>
+          <h2>Mais do que um corte — <em>uma experiência.</em></h2>
+          <p>
+            A proposta visual deste site é vender ambiente, confiança e percepção de valor.
+            O cliente não está escolhendo apenas um serviço: ele está escolhendo a forma como quer ser recebido, atendido e lembrado.
+          </p>
+          <blockquote>
+            “Quando o ambiente comunica cuidado e o digital comunica profissionalismo, o agendamento deixa de ser só interesse e vira decisão.”
+          </blockquote>
+          <a href="#agendar" class="text-link">Agendar atendimento ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="diferenciais">
+      <header class="section-head reveal">
+        <div>
+          <span class="section-index">( 04 / )</span>
+          <h2>Por que esse estilo de site <em>chama atenção.</em></h2>
+        </div>
+        <p>
+          Cada bloco foi pensado para passar credibilidade e valor. O objetivo não é só ser bonito: é fazer o negócio parecer mais profissional e pronto para receber clientes.
+        </p>
+      </header>
+
+      <div class="feature-panels">
+        <article class="feature-panel reveal">
+          <strong>IDENTIDADE VISUAL</strong>
+          <p>Base escura, tipografia elegante e cor de destaque puxada da imagem para unir estética e consistência.</p>
+        </article>
+        <article class="feature-panel reveal">
+          <strong>APRESENTAÇÃO PREMIUM</strong>
+          <p>Seções enxutas, hierarquia clara e imagens valorizadas para reforçar o posicionamento da barbearia.</p>
+        </article>
+        <article class="feature-panel reveal">
+          <strong>RESPONSIVO</strong>
+          <p>Layout adaptado para celular, tablet e desktop, mantendo a leitura e a presença visual em qualquer tela.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell booking" id="agendar">
+      <div class="booking__grid">
+        <div class="booking__copy reveal">
+          <span class="section-index">( 05 / )</span>
+          <h2>Pronto para transformar essa ideia em <em>agendamento.</em></h2>
+          <p>
+            Esse site é demonstrativo, mas já mostra como a barbearia pode apresentar serviços, comunicar valor e direcionar o cliente para o WhatsApp de forma direta.
+          </p>
+          <ul class="booking__list">
+            <li>Agendamento rápido pelo WhatsApp</li>
+            <li>Apresentação premium dos serviços</li>
+            <li>Estrutura pensada para gerar confiança</li>
+          </ul>
+        </div>
+
+        <form class="booking__form reveal" id="bookingForm">
+          <label class="field">
+            <span>Nome</span>
+            <input name="nome" type="text" placeholder="Seu nome" required />
+          </label>
+
+          <label class="field">
+            <span>Serviço</span>
+            <select name="servico">
+              <option>Executive Cut</option>
+              <option>Royal Beard</option>
+              <option>Signature Styling</option>
+              <option>Complete Experience</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Data desejada</span>
+            <input name="data" type="text" placeholder="Ex.: Sexta às 19h" />
+          </label>
+
+          <label class="field">
+            <span>Observações</span>
+            <textarea name="observacoes" rows="4" placeholder="Alguma preferência?"></textarea>
+          </label>
+
+          <button type="submit" class="btn btn--primary booking__submit">Enviar no WhatsApp ↗</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section shell contact" id="contato">
+      <div class="contact__card reveal">
+<div class="contact__info">
+          <a href="https://wa.me/5519983273927" target="_blank" rel="noopener">WhatsApp: <strong>(19) 98327-3927</strong></a>
+          <a href="mailto:jao.marcondes.2006@gmail.com">E-mail: <strong>jao.marcondes.2006@gmail.com</strong></a>
+        </div>
+
+        <div class="contact__note">
+          <p>As imagens deste projeto são ilustrativas e foram geradas por IA para fins de demonstração do que posso desenvolver.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
