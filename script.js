@@ -111,6 +111,11 @@ function setLanguage(lang) {
   });
   langButtons.forEach(btn => btn.classList.toggle('is-active', btn.dataset.lang === lang));
   localStorage.setItem('portfolio-language', lang);
+  document.querySelectorAll('a[href^="projects/"]').forEach(link => {
+    const url = new URL(link.getAttribute('href'), location.href);
+    url.searchParams.set('lang', lang);
+    link.setAttribute('href', url.pathname.replace(location.pathname.replace(/[^/]*$/, ''), '') + url.search);
+  });
 }
 langButtons.forEach(btn => btn.addEventListener('click', () => setLanguage(btn.dataset.lang)));
 setLanguage(localStorage.getItem('portfolio-language') || 'pt');

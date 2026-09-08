@@ -110,14 +110,24 @@ if(bookingForm){
     const data = formData.get('data') || 'Sem data definida';
     const observacoes = formData.get('observacoes') || 'Nenhuma';
 
-    const message = [
-      'Olá! Gostaria de agendar um horário.',
-      '',
-      `*Nome:* ${nome}`,
-      `*Serviço:* ${servico}`,
-      `*Data desejada:* ${data}`,
-      `*Observações:* ${observacoes}`
-    ].join('\n');
+    const lang = document.documentElement.lang.startsWith('en') ? 'en' : 'pt';
+    const message = lang === 'en'
+      ? [
+          "Hi! I'd like to book an appointment.",
+          '',
+          `*Name:* ${nome}`,
+          `*Service:* ${servico}`,
+          `*Preferred date:* ${data}`,
+          `*Notes:* ${observacoes}`
+        ].join('\n')
+      : [
+          'Olá! Gostaria de agendar um horário.',
+          '',
+          `*Nome:* ${nome}`,
+          `*Serviço:* ${servico}`,
+          `*Data desejada:* ${data}`,
+          `*Observações:* ${observacoes}`
+        ].join('\n');
 
     window.open(`https://wa.me/5519983273927?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
   });
