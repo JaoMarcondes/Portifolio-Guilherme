@@ -1,134 +1,66 @@
-const root = document.documentElement;
-const img = document.getElementById('heroImage');
-const swatch = document.getElementById('dominantSwatch');
-
-const fallbackAccent = { r: 185, g: 74, b: 53 };
-
-function rgbToHex(r,g,b){
-  return '#' + [r,g,b].map(v => v.toString(16).padStart(2,'0')).join('');
-}
-
-function applyAccent({r,g,b}){
-  const hex = rgbToHex(r,g,b);
-  root.style.setProperty('--accent', hex);
-  root.style.setProperty('--accent-rgb', `${r}, ${g}, ${b}`);
-  if(swatch) swatch.style.background = hex;
-}
-
-function chooseAccentFromImage(image){
-  try{
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d', { willReadFrequently: true });
-    if(!ctx) throw new Error('Canvas context unavailable');
-
-    const sampleWidth = 90;
-    const sampleHeight = Math.max(60, Math.round(sampleWidth * (image.naturalHeight / image.naturalWidth)));
-    canvas.width = sampleWidth;
-    canvas.height = sampleHeight;
-    ctx.drawImage(image, 0, 0, sampleWidth, sampleHeight);
-
-    const data = ctx.getImageData(0, 0, sampleWidth, sampleHeight).data;
-    const buckets = new Map();
-
-    for(let i = 0; i < data.length; i += 4){
-      const r = data[i], g = data[i+1], b = data[i+2], a = data[i+3];
-      if(a < 180) continue;
-      const max = Math.max(r,g,b);
-      const min = Math.min(r,g,b);
-      const sat = max - min;
-      const lum = 0.2126*r + 0.7152*g + 0.0722*b;
-      if(lum < 55 || lum > 230 || sat < 30) continue;
-
-      const qr = Math.min(255, Math.round(r / 24) * 24);
-      const qg = Math.min(255, Math.round(g / 24) * 24);
-      const qb = Math.min(255, Math.round(b / 24) * 24);
-      const key = `${qr},${qg},${qb}`;
-      const warmth = Math.max(0, qr - qb) * 0.18 + Math.max(0, qr - qg) * 0.1;
-      const score = sat + warmth + (lum > 80 && lum < 190 ? 16 : 0);
-
-      if(!buckets.has(key)){
-        buckets.set(key, {count:0, score:0, r:qr, g:qg, b:qb});
-      }
-      const bucket = buckets.get(key);
-      bucket.count += 1;
-      bucket.score += score;
-    }
-
-    let best = null;
-    buckets.forEach(bucket => {
-      const finalScore = bucket.score + bucket.count * 1.25;
-      if(!best || finalScore > best.finalScore){
-        best = {...bucket, finalScore};
-      }
-    });
-
-    applyAccent(best || fallbackAccent);
-  }catch(error){
-    applyAccent(fallbackAccent);
-    console.info('Using fallback accent color:', error?.message || error);
-  }
-}
-
-applyAccent(fallbackAccent);
-
-if(img){
-  if(img.complete && img.naturalWidth){
-    chooseAccentFromImage(img);
-  }else{
-    img.addEventListener('load', () => chooseAccentFromImage(img), { once:true });
-    img.addEventListener('error', () => applyAccent(fallbackAccent), { once:true });
-  }
-}
-
-const revealElements = document.querySelectorAll('.reveal');
-
-if('IntersectionObserver' in window){
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold:0.08 });
-  revealElements.forEach(el => observer.observe(el));
-}else{
-  revealElements.forEach(el => el.classList.add('is-visible'));
-}
-
-document.querySelectorAll('.hero .reveal').forEach(el => el.classList.add('is-visible'));
-
+const header = document.getElementById('siteHeader');
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
 const bookingForm = document.getElementById('bookingForm');
-if(bookingForm){
-  bookingForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    if(!bookingForm.reportValidity()) return;
 
-    const formData = new FormData(bookingForm);
-    const nome = formData.get('nome') || 'Não informado';
-    const servico = formData.get('servico') || 'Serviço não informado';
-    const data = formData.get('data') || 'Sem data definida';
-    const observacoes = formData.get('observacoes') || 'Nenhuma';
+const onScroll = () => {
+  header?.classList.toggle('scrolled', window.scrollY > 24);
+};
 
-    const lang = document.documentElement.lang.startsWith('en') ? 'en' : 'pt';
-    const message = lang === 'en'
-      ? [
-          "Hi! I'd like to book an appointment.",
-          '',
-          `*Name:* ${nome}`,
-          `*Service:* ${servico}`,
-          `*Preferred date:* ${data}`,
-          `*Notes:* ${observacoes}`
-        ].join('\n')
-      : [
-          'Olá! Gostaria de agendar um horário.',
-          '',
-          `*Nome:* ${nome}`,
-          `*Serviço:* ${servico}`,
-          `*Data desejada:* ${data}`,
-          `*Observações:* ${observacoes}`
-        ].join('\n');
+onScroll();
+window.addEventListener('scroll', onScroll, { passive: true });
 
-    window.open(`https://wa.me/5519983273927?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+menuToggle?.addEventListener('click', () => {
+  const open = !menuToggle.classList.contains('is-active');
+  menuToggle.classList.toggle('is-active', open);
+  navLinks?.classList.toggle('is-open', open);
+  document.body.classList.toggle('menu-open', open);
+  menuToggle.setAttribute('aria-expanded', String(open));
+  menuToggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+});
+
+navLinks?.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => {
+    menuToggle?.classList.remove('is-active');
+    navLinks?.classList.remove('is-open');
+    document.body.classList.remove('menu-open');
+    menuToggle?.setAttribute('aria-expanded', 'false');
+    menuToggle?.setAttribute('aria-label', 'Abrir menu');
   });
+});
+
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+} else {
+  document.querySelectorAll('.reveal').forEach((el) => el.classList.add('is-visible'));
 }
+
+bookingForm?.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const data = new FormData(bookingForm);
+  const nome = String(data.get('nome') || '').trim();
+  const servico = String(data.get('servico') || '').trim();
+  const horario = String(data.get('data') || '').trim();
+  const observacoes = String(data.get('observacoes') || '').trim();
+
+  const message = [
+    'Olá! Quero agendar um horário na Golden Blend.',
+    '',
+    `Nome: ${nome}`,
+    `Serviço: ${servico}`,
+    horario ? `Preferência: ${horario}` : null,
+    observacoes ? `Observação: ${observacoes}` : null,
+  ].filter(Boolean).join('\n');
+
+  const phone = '5519983273927';
+  window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+});
