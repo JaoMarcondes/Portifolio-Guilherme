@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio de Guilherme, desenvolvedor web especializado em sites modernos, responsivos e orientados a resultados." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>Guilherme — Web Developer</title>
+  <link rel="icon" type="image/png" href="./assets/favicon.png?v=5" />
+  <link rel="shortcut icon" type="image/png" href="./assets/favicon.png?v=5" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <canvas id="field" aria-hidden="true"></canvas>
+
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__top"><span>GUILHERME / PORTFOLIO</span><span id="loaderCount">00</span></div>
+    <div class="preloader__line"><span id="loaderBar"></span></div>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true"><span>VIEW</span></div>
+
+  <header class="topbar">
+    <a class="brand magnetic" href="#top" aria-label="Início">
+      <span class="brand__mark">G.</span>
+      <span class="brand__meta">WEB DEVELOPER<br><span data-i18n="location">BRAZIL / REMOTE</span></span>
+    </a>
+
+    <nav class="topbar__nav" aria-label="Navegação principal">
+      <a href="#works" data-i18n="navWork">WORK</a>
+      <a href="#about" data-i18n="navAbout">ABOUT</a>
+      <a href="#contact" data-i18n="navContact">CONTACT</a>
+    </nav>
+
+    <div class="lang" aria-label="Selecionar idioma">
+      <button class="lang__btn is-active" data-lang="pt" type="button">PT</button>
+      <span>/</span>
+      <button class="lang__btn" data-lang="en" type="button">EN</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero__eyebrow reveal-up">
+        <span data-i18n="available">DISPONÍVEL PARA NOVOS PROJETOS</span>
+        <span class="status-dot" aria-hidden="true"></span>
+      </div>
+
+      <div class="hero__title" aria-label="Guilherme Web Developer">
+        <div class="hero__line hero__line--one clip"><span>GUILHERME</span></div>
+        <div class="hero__line hero__line--two clip"><span>WEB <em>DEVELOPER</em></span></div>
+      </div>
+
+      <div class="hero__bottom reveal-up">
+        <p class="hero__statement" data-i18n="heroStatement">Crio experiências digitais com identidade, clareza e intenção.</p>
+        <a class="round-link magnetic" href="#works" aria-label="Ver projetos">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M5 13l7 7 7-7"/></svg>
+        </a>
+      </div>
+
+      <div class="hero__ticker" aria-hidden="true">
+        <div class="ticker__track">
+          <span>DESIGN WITH PURPOSE — CODE WITH DETAIL — DIGITAL EXPERIENCES — </span>
+          <span>DESIGN WITH PURPOSE — CODE WITH DETAIL — DIGITAL EXPERIENCES — </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="works section-shell" id="works">
+      <header class="section-head reveal-up">
+        <div class="section-index">( 01 / )</div>
+        <h2 data-i18n="worksTitle">PROJETOS SELECIONADOS</h2>
+        <p class="section-kicker" data-i18n="worksKicker">Uma seleção de experiências digitais criadas para diferentes negócios e propostas.</p>
+      </header>
+
+      <a class="project-feature reveal-up" href="projects/lumiere/index.html" target="_blank" rel="noopener" data-cursor="VIEW">
+        <div class="project-feature__visual">
+          <img src="assets/lumiere-cover.webp" alt="Projeto conceitual Lumière, salão de beleza" loading="lazy" decoding="async" />
+          <div class="project-feature__shade"></div>
+
+          <div class="project-feature__topline">
+            <span>01 / BEAUTY &amp; CARE</span>
+            <span>2026</span>
+          </div>
+
+          <span class="project-feature__number">01</span>
+          <span class="project-feature__view" data-i18n="projectView">VER PROJETO ↗</span>
+        </div>
+
+        <div class="project-feature__info">
+          <div class="project-feature__title">
+            <span class="project-feature__meta">CONCEPT CASE / BEAUTY SALON</span>
+            <h3>LUMIÈRE</h3>
+          </div>
+
+          <div class="project-feature__summary">
+            <p data-i18n="projectLumiereDesc">Direção editorial para um salão premium, com hero em vídeo e movimento pensado para transformar a navegação em experiência.</p>
+            <div class="project-feature__chips" aria-label="Destaques do projeto">
+              <span>EDITORIAL UI</span>
+              <span>MOTION</span>
+              <span>RESPONSIVE</span>
+              <span>HTML / CSS / JS</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a class="project-feature project-feature--offset reveal-up" href="projects/brasa-nobre/index.html" target="_blank" rel="noopener" data-cursor="VIEW">
+        <div class="project-feature__visual">
+          <img src="assets/brasa-cover.webp" alt="Projeto conceitual Brasa Nobre, restaurante gourmet" loading="lazy" decoding="async" />
+          <div class="project-feature__shade"></div>
+
+          <div class="project-feature__topline">
+            <span>02 / FOOD &amp; HOSPITALITY</span>
+            <span>2026</span>
+          </div>
+
+          <span class="project-feature__number">02</span>
+          <span class="project-feature__view" data-i18n="projectView">VER PROJETO ↗</span>
+        </div>
+
+        <div class="project-feature__info">
+          <div class="project-feature__title">
+            <span class="project-feature__meta">CONCEPT CASE / BURGER HOUSE</span>
+            <h3>BRASA NOBRE</h3>
+          </div>
+
+          <div class="project-feature__summary">
+            <p data-i18n="projectBrasaDesc">Identidade digital para uma hamburgueria premium, com produto em destaque e um fluxo de pedido direto pelo WhatsApp.</p>
+            <div class="project-feature__chips" aria-label="Destaques do projeto">
+              <span>ART DIRECTION</span>
+              <span>ORDER FLOW</span>
+              <span>WHATSAPP</span>
+              <span>RESPONSIVE</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a class="project-feature reveal-up" href="projects/aurea-odontologia/index.html" target="_blank" rel="noopener" data-cursor="VIEW">
+        <div class="project-feature__visual">
+          <img src="projects/aurea-odontologia/assets/hero-clinica.png" alt="Projeto conceitual Auréa Odontologia, clínica odontológica premium" loading="lazy" decoding="async" />
+          <div class="project-feature__shade"></div>
+
+          <div class="project-feature__topline">
+            <span>03 / HEALTH &amp; WELLNESS</span>
+            <span>2026</span>
+          </div>
+
+          <span class="project-feature__number">03</span>
+          <span class="project-feature__view" data-i18n="projectView">VER PROJETO ↗</span>
+        </div>
+
+        <div class="project-feature__info">
+          <div class="project-feature__title">
+            <span class="project-feature__meta">CONCEPT CASE / DENTAL CLINIC</span>
+            <h3>AURÉA ODONTOLOGIA</h3>
+          </div>
+
+          <div class="project-feature__summary">
+            <p data-i18n="projectAureaDesc">Experiência digital para uma clínica premium, combinando arquitetura visual, iluminação progressiva e interação por scroll.</p>
+            <div class="project-feature__chips" aria-label="Destaques do projeto">
+              <span>SCROLL MOTION</span>
+              <span>PARALLAX</span>
+              <span>PREMIUM UI</span>
+              <span>RESPONSIVE</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a class="project-feature project-feature--offset reveal-up" href="projects/golden-blend-barbers/index.html" target="_blank" rel="noopener" data-cursor="VIEW">
+        <div class="project-feature__visual">
+          <img src="https://images.unsplash.com/photo-1576168056582-0a851a87ab8e?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000" alt="Projeto Golden Blend Barbers" loading="lazy" decoding="async" style="object-position:center 48%;" />
+          <div class="project-feature__shade"></div>
+
+          <div class="project-feature__topline">
+            <span>04 / GROOMING &amp; LIFESTYLE</span>
+            <span>2026</span>
+          </div>
+
+          <span class="project-feature__number">04</span>
+          <span class="project-feature__view" data-i18n="projectView">VER PROJETO ↗</span>
+        </div>
+
+        <div class="project-feature__info">
+          <div class="project-feature__title">
+            <span class="project-feature__meta">CONCEPT CASE / PREMIUM BARBERSHOP</span>
+            <h3>GOLDEN BLEND</h3>
+          </div>
+
+          <div class="project-feature__summary">
+            <p data-i18n="projectBarberDesc">Site conceitual para uma barbearia premium, com direção visual cinematográfica, destaque inspirado no barber pole e agendamento direto pelo WhatsApp.</p>
+            <div class="project-feature__chips" aria-label="Destaques do projeto">
+              <span>ART DIRECTION</span>
+              <span>RESPONSIVE</span>
+              <span>WHATSAPP</span>
+              <span>MOTION</span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </section>
+
+    <section class="about section-shell" id="about">
+      <header class="section-head reveal-up">
+        <div class="section-index">( 02 / )</div>
+        <h2 data-i18n="aboutTitle">SOBRE</h2>
+      </header>
+
+      <div class="about__grid">
+        <div class="about__aside reveal-up">
+          <span class="mono" data-i18n="aboutAside">DESENVOLVIMENTO WEB<br>DESIGN RESPONSIVO<br>EXPERIÊNCIAS DIGITAIS</span>
+        </div>
+        <div class="about__copy reveal-up">
+          <p class="about__lead" data-i18n="aboutLead">Sou <strong>Guilherme, desenvolvedor web</strong>, focado na criação de sites modernos, responsivos e pensados para gerar resultados para empresas e profissionais.</p>
+          <p data-i18n="aboutBody1">Desenvolvo projetos personalizados com atenção à identidade visual, organização das informações, experiência do usuário e adaptação completa para celular, tablet e computador.</p>
+          <p data-i18n="aboutBody2">Trabalho com sites institucionais, landing pages, cardápios digitais, páginas de serviços, portfólios e soluções com integrações e funcionalidades específicas para cada negócio.</p>
+          <p data-i18n="aboutBody3">Meu objetivo é transformar a presença digital de cada cliente em algo mais profissional, confiável e preparado para atrair novas oportunidades.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services section-shell" id="services">
+      <header class="section-head reveal-up">
+        <div class="section-index">( 03 / )</div>
+        <h2 data-i18n="servicesTitle">O QUE EU FAÇO</h2>
+      </header>
+
+      <div class="service-list">
+        <article class="service-row reveal-up">
+          <span class="service-row__num">01</span>
+          <h3 data-i18n="service1">SITES INSTITUCIONAIS</h3>
+          <p data-i18n="service1desc">Presença digital sólida, clara e profissional.</p>
+          
+        </article>
+        <article class="service-row reveal-up">
+          <span class="service-row__num">02</span>
+          <h3>LANDING PAGES</h3>
+          <p data-i18n="service2desc">Páginas focadas em campanhas, serviços e conversão.</p>
+          
+        </article>
+        <article class="service-row reveal-up">
+          <span class="service-row__num">03</span>
+          <h3 data-i18n="service3">PORTFÓLIOS & SERVIÇOS</h3>
+          <p data-i18n="service3desc">Projetos que valorizam trabalho, marca e autoridade.</p>
+          
+        </article>
+        <article class="service-row reveal-up">
+          <span class="service-row__num">04</span>
+          <h3 data-i18n="service4">INTEGRAÇÕES & SISTEMAS</h3>
+          <p data-i18n="service4desc">Funcionalidades sob medida, APIs, bancos de dados e automações.</p>
+          
+        </article>
+      </div>
+
+      <div class="services__cta reveal-up">
+        <p data-i18n="servicesCtaText">Precisa de um site ou de uma solução específica para o seu negócio?</p>
+        <a href="#contact" class="services__cta-link magnetic" data-i18n="servicesCta">FALAR SOBRE UM PROJETO ↗</a>
+      </div>
+    </section>
+
+    <section class="process section-shell" id="process">
+      <header class="section-head reveal-up">
+        <div class="section-index">( 04 / )</div>
+        <h2 data-i18n="processTitle">PROCESSO</h2>
+      </header>
+
+      <div class="process__rail reveal-up">
+        <div class="process__progress" id="processProgress"></div>
+        <div class="process__step"><span>01</span><strong data-i18n="process1">ESTRATÉGIA</strong><small data-i18n="process1sub">Objetivo, público e direção.</small></div>
+        <div class="process__step"><span>02</span><strong>DESIGN</strong><small data-i18n="process2sub">Identidade, hierarquia e experiência.</small></div>
+        <div class="process__step"><span>03</span><strong data-i18n="process3">CÓDIGO</strong><small data-i18n="process3sub">Performance, responsividade e interação.</small></div>
+        <div class="process__step"><span>04</span><strong data-i18n="process4">ENTREGA</strong><small data-i18n="process4sub">Revisão, publicação e acabamento.</small></div>
+      </div>
+    </section>
+
+    <section class="stack section-shell">
+      <header class="section-head reveal-up">
+        <div class="section-index">( 05 / )</div>
+        <h2 data-i18n="stackTitle">TECNOLOGIAS</h2>
+        <p class="section-kicker" data-i18n="stackKicker">Ferramentas e linguagens que uso nos meus projetos.</p>
+      </header>
+
+      <div class="tech-grid">
+        <article class="tech-group reveal-up">
+          <span class="tech-group__index">01</span>
+          <h3>FRONT-END</h3>
+          <div class="tech-list">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Bootstrap</span>
+          </div>
+        </article>
+
+        <article class="tech-group reveal-up">
+          <span class="tech-group__index">02</span>
+          <h3 data-i18n="techDataTitle">DADOS &amp; INTEGRAÇÕES</h3>
+          <div class="tech-list">
+            <span>Supabase</span>
+            <span>MySQL</span>
+            <span>APIs</span>
+          </div>
+        </article>
+
+        <article class="tech-group reveal-up">
+          <span class="tech-group__index">03</span>
+          <h3 data-i18n="techLanguagesTitle">OUTRAS LINGUAGENS</h3>
+          <div class="tech-list">
+            <span>C#</span>
+            <span>Java</span>
+            <span>Python <small data-i18n="basicLevel">(básico)</small></span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact section-shell" id="contact">
+      <div class="contact__meta reveal-up">
+        <div class="section-index">( 06 / )</div>
+        <p data-i18n="contactKicker">TEM UM PROJETO EM MENTE?</p>
+      </div>
+
+      <a class="contact__headline reveal-up" href="https://wa.me/5519983273927" target="_blank" rel="noopener" data-cursor="LET'S GO">
+        <span data-i18n="contactHeadline1">VAMOS CRIAR</span>
+        <span class="outline" data-i18n="contactHeadline2">ALGO FORTE.</span>
+      </a>
+
+      <div class="contact__footer reveal-up">
+        <div>
+          <span class="mono">WHATSAPP</span>
+          <a href="https://wa.me/5519983273927" target="_blank" rel="noopener">+55 19 98327-3927 ↗</a>
+        </div>
+        <div>
+          <span class="mono">EMAIL</span>
+          <a href="mailto:jao.marcondes.2006@gmail.com">jao.marcondes.2006@gmail.com ↗</a>
+        </div>
+        <div class="contact__signature">
+          <span class="mono">© 2026</span>
+          <span>GUILHERME — WEB DEVELOPER</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

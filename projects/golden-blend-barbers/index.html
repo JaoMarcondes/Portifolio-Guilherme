@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Golden Blend Barbers — conceito de site para barbearia." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>Golden Blend Barbers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="nav shell">
+      <a class="brand" href="#inicio" aria-label="Golden Blend Barbers — início">
+        <span class="brand__main">GOLDEN BLEND</span>
+        <span class="brand__sub">BARBERS</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menu">
+        <span></span><span></span>
+      </button>
+
+      <nav class="nav__links" id="navLinks" aria-label="Navegação principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#casa">A casa</a>
+        <a href="#agendar">Agendar</a>
+      </nav>
+
+      <a class="nav__cta" href="#agendar">Marcar horário</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="heroTitle">
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__content shell">
+        <div class="hero__topline reveal">
+          <span>BARBEARIA · CORTE · BARBA</span>
+          <span>DESDE 2026</span>
+        </div>
+
+        <div class="hero__copy reveal">
+          <p class="eyebrow">GOLDEN BLEND BARBERS</p>
+          <h1 id="heroTitle">Corte bom.<br />Sem exagero.</h1>
+          <p class="hero__lead">Corte, barba e acabamento com atenção ao detalhe — do jeito que uma boa barbearia deve ser.</p>
+          <div class="hero__actions">
+            <a class="btn btn--light" href="#agendar">Agendar horário</a>
+            <a class="btn btn--text" href="#servicos">Ver serviços <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+
+        <div class="hero__footer reveal">
+          <span>ATENDIMENTO COM HORA MARCADA</span>
+          <span class="hero__line"></span>
+          <span>SEG — SÁB</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-strip" aria-label="Serviços em destaque">
+      <div class="shell service-strip__inner">
+        <span>CORTE</span>
+        <i></i>
+        <span>BARBA</span>
+        <i></i>
+        <span>CORTE + BARBA</span>
+        <i></i>
+        <span>ACABAMENTO</span>
+      </div>
+    </section>
+
+    <section class="section shell" id="servicos">
+      <header class="section-head reveal">
+        <div>
+          <span class="kicker">01 / SERVIÇOS</span>
+          <h2>O essencial, bem feito.</h2>
+        </div>
+        <p>Sem nome complicado para serviço simples. Você escolhe o que precisa e agenda direto pelo WhatsApp.</p>
+      </header>
+
+      <div class="services">
+        <article class="service reveal">
+          <span class="service__number">01</span>
+          <div>
+            <h3>Corte</h3>
+            <p>Clássico, social, degradê ou na tesoura. Finalização incluída.</p>
+          </div>
+          <span class="service__arrow" aria-hidden="true">↗</span>
+        </article>
+
+        <article class="service reveal">
+          <span class="service__number">02</span>
+          <div>
+            <h3>Barba</h3>
+            <p>Desenho, alinhamento e acabamento para manter o formato certo.</p>
+          </div>
+          <span class="service__arrow" aria-hidden="true">↗</span>
+        </article>
+
+        <article class="service reveal">
+          <span class="service__number">03</span>
+          <div>
+            <h3>Corte + Barba</h3>
+            <p>Os dois serviços no mesmo horário, com um acabamento consistente.</p>
+          </div>
+          <span class="service__arrow" aria-hidden="true">↗</span>
+        </article>
+
+        <article class="service reveal">
+          <span class="service__number">04</span>
+          <div>
+            <h3>Acabamento</h3>
+            <p>Contorno e pequenos ajustes entre um corte e outro.</p>
+          </div>
+          <span class="service__arrow" aria-hidden="true">↗</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="house" id="casa">
+      <div class="house__image" role="img" aria-label="Barbeiro trabalhando em uma barbearia"></div>
+      <div class="house__content shell">
+        <div class="house__panel reveal">
+          <span class="kicker">02 / A CASA</span>
+          <h2>Um lugar para chegar, sentar e sair bem.</h2>
+          <p>A proposta da Golden Blend é simples: atendimento pontual, conversa boa e trabalho caprichado. O resto é detalhe.</p>
+          <a class="text-link" href="#agendar">Marcar meu horário <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell booking" id="agendar">
+      <div class="booking__intro reveal">
+        <span class="kicker">03 / AGENDAMENTO</span>
+        <h2>Escolha o serviço.<br />A gente organiza o resto.</h2>
+        <p>Preencha os campos e o pedido abre pronto no WhatsApp.</p>
+      </div>
+
+      <form class="booking__form reveal" id="bookingForm">
+        <label class="field">
+          <span>Seu nome</span>
+          <input name="nome" type="text" autocomplete="name" placeholder="Nome" required />
+        </label>
+
+        <label class="field">
+          <span>Serviço</span>
+          <select name="servico" required>
+            <option value="">Selecione</option>
+            <option>Corte</option>
+            <option>Barba</option>
+            <option>Corte + Barba</option>
+            <option>Acabamento</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Quando você prefere?</span>
+          <input name="data" type="text" placeholder="Ex.: sexta, depois das 18h" />
+        </label>
+
+        <label class="field field--full">
+          <span>Observação</span>
+          <textarea name="observacoes" rows="4" placeholder="Opcional"></textarea>
+        </label>
+
+        <button class="btn btn--dark field--full" type="submit">Continuar no WhatsApp <span aria-hidden="true">↗</span></button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer__inner">
+      <div>
+        <strong>GOLDEN BLEND</strong>
+        <span>BARBERS</span>
+      </div>
+      <a href="https://wa.me/5519983273927" target="_blank" rel="noopener">WhatsApp ↗</a>
+      <p>Projeto demonstrativo. Fotografia de referência usada sob licença do Unsplash.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
