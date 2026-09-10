@@ -92,7 +92,7 @@ button { font: inherit; }
 .section-head h2 { margin: 0; font-size: clamp(34px, 5.3vw, 84px); line-height: .9; letter-spacing: -.055em; font-weight: 700; }
 .section-kicker { margin: 0; font-size: 14px; line-height: 1.5; color: var(--muted); }
 
-.works { padding-top: 18vh; padding-bottom: 24vh; }
+.works { padding-top: 14vh; padding-bottom: 18vh; }
 .works-stage { position: relative; min-height: 70vh; border: 1px solid var(--line); background: var(--panel); display: grid; place-items: center; overflow: hidden; }
 .works-stage::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, transparent 0 calc(25% - 1px), rgba(255,255,255,.045) calc(25% - 1px) 25%); }
 .works-stage__meta, .works-stage__corner { position: absolute; left: 18px; right: 18px; display: flex; justify-content: space-between; font: 400 10px/1 "DM Mono", monospace; color: var(--muted); letter-spacing: .06em; }
@@ -110,7 +110,8 @@ button { font: inherit; }
    ========================================================= */
 .project-feature{
   display:block;
-  margin:0 0 clamp(96px,12vw,180px);
+  width:min(100%,1180px);
+  margin:0 auto clamp(72px,8vw,120px);
   color:var(--fg);
 }
 .project-feature:last-of-type{
@@ -118,7 +119,7 @@ button { font: inherit; }
 }
 .project-feature__visual{
   position:relative;
-  width:100%;
+  width:88%;
   aspect-ratio:16/9;
   overflow:hidden;
   border:1px solid var(--line);
@@ -126,7 +127,7 @@ button { font: inherit; }
   isolation:isolate;
 }
 .project-feature--offset .project-feature__visual{
-  width:88%;
+  width:82%;
   margin-left:auto;
 }
 .project-feature__visual::after{
@@ -183,7 +184,7 @@ button { font: inherit; }
   z-index:2;
   left:18px;
   bottom:-.08em;
-  font:700 clamp(100px,18vw,285px)/.72 Manrope,sans-serif;
+  font:700 clamp(78px,12vw,188px)/.72 Manrope,sans-serif;
   letter-spacing:-.11em;
   color:transparent;
   -webkit-text-stroke:1px rgba(189,221,252,.20);
@@ -228,13 +229,14 @@ button { font: inherit; }
 }
 .project-feature__info{
   display:grid;
-  grid-template-columns:minmax(0,1.3fr) minmax(280px,.7fr);
-  gap:clamp(32px,6vw,100px);
-  padding:24px 0 0;
+  width:88%;
+  grid-template-columns:minmax(0,1.2fr) minmax(250px,.8fr);
+  gap:clamp(24px,4vw,64px);
+  padding:18px 0 0;
   border-top:1px solid transparent;
 }
 .project-feature--offset .project-feature__info{
-  width:88%;
+  width:82%;
   margin-left:auto;
 }
 .project-feature__meta{
@@ -246,7 +248,7 @@ button { font: inherit; }
 }
 .project-feature__title h3{
   margin:0;
-  font-size:clamp(45px,6.4vw,104px);
+  font-size:clamp(38px,4.7vw,72px);
   line-height:.86;
   letter-spacing:-.07em;
   font-weight:700;
@@ -270,10 +272,10 @@ button { font: inherit; }
   display:flex;
   flex-wrap:wrap;
   gap:7px;
-  margin-top:20px;
+  margin-top:14px;
 }
 .project-feature__chips span{
-  padding:8px 10px;
+  padding:7px 9px;
   border:1px solid rgba(189,221,252,.15);
   border-radius:999px;
   background:rgba(136,189,242,.025);
@@ -447,6 +449,41 @@ button { font: inherit; }
   .contact__headline span { font-size: clamp(50px, 16vw, 82px); line-height: .82; }
   .contact__footer { grid-template-columns: 1fr; }
   .contact__signature { grid-column: auto; }
+}
+
+
+/* Compact project cases: keep the work easy to scan without losing the editorial layout. */
+@media (max-width: 900px) {
+  .project-feature,
+  .project-feature:last-of-type {
+    width: min(100%, 760px);
+    margin: 0 auto 72px;
+  }
+
+  .project-feature__visual,
+  .project-feature--offset .project-feature__visual,
+  .project-feature__info,
+  .project-feature--offset .project-feature__info {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .project-feature__visual { aspect-ratio: 16 / 10; }
+  .project-feature__info { gap: 22px; padding-top: 16px; }
+  .project-feature__title h3 { font-size: clamp(36px, 7vw, 58px); }
+}
+
+@media (max-width: 600px) {
+  .project-feature,
+  .project-feature:last-of-type { margin-bottom: 58px; }
+  .project-feature__visual { aspect-ratio: 4 / 3; }
+  .project-feature__topline { top: 14px; left: 14px; right: 14px; }
+  .project-feature__view { right: 14px; bottom: 14px; min-width: 112px; height: 38px; padding: 0 14px; }
+  .project-feature__number { left: 10px; font-size: clamp(64px, 25vw, 108px); }
+  .project-feature__info { grid-template-columns: 1fr; }
+  .project-feature__title h3 { font-size: clamp(34px, 11vw, 52px); }
+  .project-feature__summary p { font-size: 13px; line-height: 1.55; }
+  .project-feature__chips { margin-top: 12px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
