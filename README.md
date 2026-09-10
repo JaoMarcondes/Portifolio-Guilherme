@@ -1,30 +1,83 @@
-# Guilherme — Portfolio
+# Guilherme — Web Developer Portfolio
 
-Portfólio bilíngue (PT/EN) em HTML, CSS e JavaScript puro.
+Portfólio pessoal desenvolvido para apresentar meus projetos de desenvolvimento web, habilidades técnicas e experiências na criação de interfaces modernas, responsivas e focadas em negócios.
 
-## Arquivos
-- `index.html` — estrutura e conteúdo
-- `styles.css` — identidade visual, responsividade e animações
-- `script.js` — idioma, preloader, reveal, cursor, canvas e interações
+🌐 **Portfólio online:**  
+https://portifolio-guilherme-three.vercel.app/
 
-## Publicar
-Pode ser publicado diretamente no Vercel, Netlify ou Hostinger como site estático.
+## Sobre o projeto
 
-## Adicionar projetos
-A seção `#works` já está preparada. Quando os novos projetos estiverem prontos, substitua o conteúdo de `.works-stage` pelos cases do portfólio.
+O portfólio foi criado com uma identidade visual editorial e minimalista, priorizando tipografia, composição, responsividade e microinterações.
 
+Cada projeto apresentado possui uma direção visual própria, evitando o uso de um único template para diferentes segmentos.
 
-## Projetos atuais
-- Lumière — salão de beleza
-- Brasa Nobre — restaurante/hamburgueria
-- Auréa Odontologia — clínica odontológica premium
+## Projetos
 
+### Lumière
+Site conceito para um salão de beleza premium, com foco em fotografia, vídeo no hero, tipografia editorial e animações sutis.
 
-## Paleta aplicada
-Tema atualizado com a paleta “Stormy Morning”: #6A89A7, #BDDDFC, #88BDF2 e #384959, mantendo o fundo preto.
+### Brasa Nobre
+Experiência digital para uma hamburgueria, com apresentação de produtos e fluxo de pedido integrado ao WhatsApp.
 
+### Auréa Odontologia
+Landing page para clínica odontológica premium, utilizando profundidade visual, iluminação, parallax e animações guiadas pelo scroll.
 
-## Atualização visual
-A seção de projetos foi redesenhada em formato de case editorial, com capas maiores, hierarquia tipográfica, metadados e tags de entrega.
+### Golden Blend Barbers
+Site para barbearia com identidade clássica e moderna, fotografia em destaque, apresentação de serviços e agendamento.
 
-- Golden Blend Barbers — barbearia premium
+## Tecnologias
+
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap
+- Supabase
+- MySQL
+- APIs
+- Git & GitHub
+- Vercel
+
+## Principais características
+
+- Design responsivo para desktop, tablet e celular
+- Interfaces personalizadas para cada projeto
+- Animações e microinterações
+- Integração com WhatsApp
+- Otimização de imagens e performance
+- Uso de `prefers-reduced-motion`
+- Prevenção de overflow horizontal em dispositivos móveis
+- Estrutura sem frameworks pesados
+
+## Estrutura
+
+```text
+Portifolio-Guilherme/
+│
+├── index.html
+├── styles.css
+├── script.js
+│
+├── assets/
+│
+└── projects/
+    ├── lumiere/
+    ├── brasa-nobre/
+    ├── aurea-odontologia/
+    └── golden-blend-barbers/
+```
+
+## Observação
+
+Alguns projetos apresentados são conceitos demonstrativos criados para estudo, portfólio e apresentação comercial. Em alguns casos, as imagens utilizadas podem ter sido geradas por inteligência artificial ou utilizadas apenas como referência visual.
+
+## Autor
+
+**Guilherme — Web Developer**
+
+GitHub: https://github.com/JaoMarcondes
+
+Portfólio: https://portifolio-guilherme-three.vercel.app/
+
+---
+
+Desenvolvido com foco em design, responsividade e experiência do usuário.
